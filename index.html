@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <h1>Weather App</h1>
+
+        <div class="tab-contaner">
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <div class="weather_contaner">
+
+            <!-- for grant location contaner -->
+            <div class="sub-contaner grant_location__contaner">
+                <img src="https://codehelp-weather-app.netlify.app/assets/location.png" width="80" height="80" loading="lazy">
+                <p>Grant Location Access</p>
+                <p>Allow Access To Get Weather Information</p>
+                <button class="btn" data-grantAccess>grant access</button>
+            </div>
+
+            <!-- for search weather tab -->
+            <form class="form_contaner" data-seachForm>
+                <input placeholder="Search for city..." data-searchInput>
+                <button class="btn">
+                    <img src="https://codehelp-weather-app.netlify.app/assets/search.png" width="20" height="20" loading="lazy">
+                </button>
+            </form>
+
+            <!-- for loading screen -->
+            <div class="sub-contaner loading-contaner">
+                <img src="https://codehelp-weather-app.netlify.app/assets/loading.gif" width="150" height="150">
+                <p>loading</p>
+            </div>
+
+            <!-- for show weather info -->
+            <div class="sub-contaner user_info__contaner">
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-contryIcon>
+                </div>
+
+                <p data-weatherDesc></p>
+                <img data-weatherIcon>
+                <p data-temp></p>
+
+                <!-- for weather cards  -->
+                <div class="paramiter_contaner">
+
+                    <!-- card 1 -->
+                    <div class="paramiter">
+                        <img src="https://codehelp-weather-app.netlify.app/assets/wind.png">
+                        <p>WINDSPEED</p>
+                        <p data-windSpeed></p>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="paramiter">
+                        <img src="https://codehelp-weather-app.netlify.app/assets/humidity.png">
+                        <p>HUMIDITY</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div class="paramiter">
+                        <img src="https://codehelp-weather-app.netlify.app/assets/cloud.png">
+                        <p>CLOUDS</p>
+                        <p data-clouds></p>
+                    </div>
+
+                </div>
+
+            </div>
+            
+
+
+        </div>
+
+        <div class="sub-contaner error_Contaner">
+            <img src="https://codehelp-weather-app.netlify.app/assets/not-found.png" width="300" height="300" loading="lazy">
+            <p>City Not Found</p>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="weather.js"></script>
+
+
+</body>
+</html>
